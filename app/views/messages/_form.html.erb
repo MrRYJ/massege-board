@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<%= form_for(@message) do |f| %>
-<% if @message.errors.present? %>
-=======
 <%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
   <% if @message.errors.present? %>
->>>>>>> challenge1
+
     <div class="alert alert-danger">
       <%= alert %>
       <ul>
@@ -16,27 +12,8 @@
       </ul>
     </div>
   <% end %>
-<<<<<<< HEAD
-  
-  名前:
-  <%= f.text_field :name %>
 
-  <br>
-  
-  内容:
-  <%= f.text_area :body %>
-  
-  <br>
-  
-  年齢:
-  <%= f.text_field :age %>
-  
-  <br>
-
-  <%= f.submit class: "btn btn-sm btn-primary" %>
-=======
     <!--ここまでで、エラーメッセージ表示-->
-    
     <!--ここから、レイアウト-->
   <div class="form-group">
     <label for="message_name" class="control-label col-md-2">名前:</label>
@@ -54,10 +31,12 @@
    </div>
 
   <div class="form-group">
-    <div class="col-md-offset-2 col-md-2">
-      <%= f.submit class: "btn btn-sm btn-primary" %>
-    </div>
+    年齢:
+  <%= f.text_field :age %>
+  <br>
+   </div>
+   
+  <div class="col-md-offset-2 col-md-2">
+   <%= f.submit class: "btn btn-sm btn-primary" %>
   </div>
-  
->>>>>>> challenge1
 <% end %>
