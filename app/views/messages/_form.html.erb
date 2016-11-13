@@ -16,27 +16,30 @@
     <!--ここまでで、エラーメッセージ表示-->
     <!--ここから、レイアウト-->
   <div class="form-group">
-    <label for="message_name" class="control-label col-md-2">名前:</label>
-    <div class="col-md-10" >
+    <label for="message_name" class="control-label col-lg-2">名前:</label>
+    <div class="col-lg-10" >
       <%= f.text_field :name, class: "form-control", placeholder: "お名前を入力してください"%>
     </div>
   </div>  
     
     <!--ここから内容の部分-->
    <div class="form-group">
-    <label for="message_body" class="control-label col-md-2">内容:</label>
-    <div class="col-md-10" >
+    <label for="message_body" class="control-label col-lg-2">内容:</label>
+    
       <%= f.text_area :body, class: "form-control", placeholder: "内容を入力してください" %>
+      <div class="col-lg-10" >
     </div>
    </div>
 
   <div class="form-group">
-    年齢:
-  <%= f.text_field :age %>
+    <label for="message_age" class="control-label col-lg-2">年齢:</label>
+   <%= f.text_field :age, class: "form-control", placeholder: "年齢を入力してください"%>
+   <div class="col-lg-10" >
   <br>
    </div>
+    </div>
    
-  <div class="col-md-offset-2 col-md-2">
+  <div class="col-md-offset-2 col-xs-2">
    <%= f.submit class: "btn btn-sm btn-primary" %>
   </div>
 <% end %>
